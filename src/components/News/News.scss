@@ -1,0 +1,227 @@
+@import '@styles/shared.scss';
+
+.news {
+  padding: 177px 0 47px;
+  background-color: $white;
+
+  &__content {
+    width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+  }
+
+  &__heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__pre-heading {
+    margin-bottom: 8px;
+    font-family: $tertiary-font-stack;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    color: $primary-olive;
+  }
+
+  &__heading {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: normal;
+    color: $primary-cyan;
+
+    &_white {
+      color: $white;
+    }
+  }
+
+  &__more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    width: 220px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    color: $primary-cyan;
+    background-color: $white;
+    border: 2px solid $primary-cyan;
+    border-radius: 16px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+  }
+
+  &__item {
+    position: relative;
+    width: 677px;
+    height: 524px;
+    border-radius: 30px;
+  }
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  &__date {
+    position: absolute;
+    top: 43px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 82px;
+    height: 82px;
+    background-color: $white;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: normal;
+    color: $primary-cyan;
+
+    &_large {
+      font-size: 25px;
+    }
+  }
+
+  &__overview {
+    position: absolute;
+    bottom: -68px;
+    left: 32px;
+    width: 613px;
+    height: 330px;
+    padding: 46px 57px 60px;
+    background-color: $white;
+    border-radius: 31px 34px 30px 30px;
+    box-shadow: 0px 20px 35px 0px rgba(167, 167, 167, 0.25);
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    color: #274c5b;
+    font-weight: 400;
+    line-height: normal;
+
+    svg {
+      color: $primary-sunny;
+    }
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: normal;
+    color: $primary-cyan;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+    font-family: $secondary-font-stack;
+    font-weight: 400;
+    line-height: 1.65;
+  }
+
+  &__read-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    width: 220px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    color: $primary-cyan;
+    background-color: $primary-sunny;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__read-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    color: $white;
+    background-color: $primary-cyan;
+    border-radius: 50%;
+  }
+
+  &__subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    margin: 0 auto;
+    padding: 105px 71px;
+    background-image: linear-gradient(rgba(211, 211, 211, 0.1), rgba(211, 211, 211, 0.1)),
+      url('../../assets/subscribe.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+  }
+
+  &__field {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__input {
+    width: 349px;
+    height: 80px;
+    padding: 28px 23px 31px;
+    font-family: $primary-font-stack;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    color: #ababab;
+    background-color: $white;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+
+    &::placeholder {
+      font-family: $primary-font-stack;
+      font-style: italic;
+      font-weight: 400;
+      line-height: normal;
+      color: #ababab;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    font-family: $primary-font-stack;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    color: $white;
+    background-color: $primary-cyan;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+  }
+}

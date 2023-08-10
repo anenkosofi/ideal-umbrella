@@ -1,14 +1,12 @@
 import React, { FC } from 'react';
 
-import Container from '@components/Container';
+import News from '@components/News';
 
 const Home: FC = () => {
   return (
-    <section>
-      <Container>
-        <div>Home</div>
-      </Container>
-    </section>
+    <>
+      <News />
+    </>
   );
 };
 
