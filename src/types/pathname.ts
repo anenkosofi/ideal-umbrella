@@ -7,4 +7,5 @@ export enum Pathname {
   'BLOG' = '/blog',
   'SERVICES' = '/services',
   'PROJECTS' = '/projects',
+  'NEWS' = '/news',
 }
