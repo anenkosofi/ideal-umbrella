@@ -1,0 +1,63 @@
+@import '@styles/shared.scss';
+
+.who {
+  background-color: $white;
+
+  &__container {
+    position: relative;
+  }
+
+  &__pic {
+    width: 952px;
+    height: 931px;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 789px;
+    height: 723px;
+    padding: 78px 65px 77px 89px;
+    background-color: $white;
+    border-radius: 30px;
+  }
+
+  &__pre-heading {
+    font-family: $tertiary-font-stack;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    color: $primary-olive;
+  }
+
+  &__heading {
+    margin-bottom: 35px;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: normal;
+    color: $primary-cyan;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &__item {
+    h3 {
+      font-size: 25px;
+      font-weight: 500;
+      line-height: normal;
+      color: $primary-cyan;
+    }
+
+    p {
+      font-family: $secondary-font-stack;
+      font-weight: 400;
+      line-height: 165.4%;
+    }
+  }
+}
