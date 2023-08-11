@@ -30,21 +30,23 @@ const WhoWeAre: FC = () => {
   return (
     <section className="who">
       <Container>
-        <img src={field} alt="Field" className="who__pic" />
-        <div className="who__content">
-          <p className="who__pre-heading">Eco Friendly</p>
-          <h2 className="who__heading">
-            Econis is a Friendly
-            <br /> Organic Store
-          </h2>
-          <ul className="who__list">
-            {items.map(({ id, title, description }) => (
-              <li key={id} className="who__item">
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </li>
-            ))}
-          </ul>
+        <div className="who__container">
+          <img src={field} alt="Field" className="who__pic" />
+          <div className="who__content">
+            <p className="who__pre-heading">Eco Friendly</p>
+            <h2 className="who__heading">
+              Econis is a Friendly
+              <br /> Organic Store
+            </h2>
+            <ul className="who__list">
+              {items.map(({ id, title, description }) => (
+                <li key={id} className="who__item">
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </Container>
     </section>

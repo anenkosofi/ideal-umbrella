@@ -1,14 +1,13 @@
 @import '@styles/shared.scss';
 
 .who {
-  position: relative;
-  height: 931px;
   background-color: $white;
 
+  &__container {
+    position: relative;
+  }
+
   &__pic {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 952px;
     height: 931px;
     object-fit: cover;
@@ -18,7 +17,6 @@
     position: absolute;
     top: 100px;
     left: 50%;
-    transform: translateX(-10%);
     width: 789px;
     height: 723px;
     padding: 78px 65px 77px 89px;
