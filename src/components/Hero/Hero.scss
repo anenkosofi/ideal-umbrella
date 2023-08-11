@@ -1,0 +1,49 @@
+@import '@styles/shared.scss';
+
+.hero {
+  height: 898px;
+  padding-top: 247px;
+  background-image: url('../../assets/left-top.svg'), url('../../assets/left-top-bottom.svg'),
+    url('../../assets/left-bottom.svg'), url('../../assets/center.svg'),
+    url('../../assets/line.svg'), url('../../assets/bottom-right.svg'),
+    url('../../assets/top-right.svg'), url('../../assets/top-right-left.svg'),
+    url('../../assets/background.png'), linear-gradient(#f1eff0, #f1eff0);
+  background-position: top left, top 16% left 6%, bottom left, top 6% center, bottom right 3.5%,
+    bottom 2% right, top right, top 2% right 7%, bottom right, center;
+  background-size: 188px, 68px, 230px, 158px, 101px, 192px, 194px, 121px, 1100px, cover;
+  background-repeat: no-repeat;
+
+  &__pre-heading {
+    font-family: $tertiary-font-stack;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    color: $primary-olive;
+  }
+
+  &__heading {
+    margin-bottom: 23px;
+    font-size: 70px;
+    font-weight: 800;
+    line-height: normal;
+    color: $primary-cyan;
+  }
+
+  &__explore-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    width: 220px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    color: $primary-cyan;
+    background-color: $primary-sunny;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    cursor: pointer;
+  }
+}

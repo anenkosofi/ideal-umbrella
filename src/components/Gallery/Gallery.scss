@@ -1,0 +1,37 @@
+@import '@styles/shared.scss';
+
+.gallery {
+  padding: 187px 0;
+  background-color: #f1f8f4;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    width: 492px;
+    height: 463px;
+  }
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 236px;
+    height: 82px;
+    background-color: $white;
+    border-radius: 20px;
+  }
+}

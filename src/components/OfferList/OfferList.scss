@@ -1,0 +1,47 @@
+@import '@styles/shared.scss';
+
+.offer {
+  padding: 145px 0 190px;
+  background-color: $white;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+  }
+
+  &__item {
+    position: relative;
+    width: 682px;
+    height: 367px;
+    border-radius: 30px;
+  }
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  &__content {
+    position: absolute;
+    top: 32%;
+    left: 8%;
+
+    p {
+      font-family: $tertiary-font-stack;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    h2 {
+      width: 278px;
+      font-size: 40px;
+      font-weight: 800;
+      line-height: normal;
+    }
+  }
+}
