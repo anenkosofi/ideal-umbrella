@@ -68,6 +68,11 @@
     height: 101px;
     background-color: $white;
     border-radius: 20px;
+
+    img {
+      width: 49px;
+      height: 49px;
+    }
   }
 
   &__overview {

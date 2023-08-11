@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
-import { ReactComponent as Mail } from '@assets/mail.svg';
+import mail from '@assets/mail.png';
 import oranges from '@assets/oranges.png';
-import { ReactComponent as Vegan } from '@assets/vegan.svg';
+import vegan from '@assets/vegan.png';
 import Container from '@components/Container';
 
 import './About.scss';
@@ -11,13 +11,13 @@ import './About.scss';
 const items = [
   {
     id: '301',
-    icon: Vegan,
+    image: vegan,
     title: 'Organic Foods Only',
     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
   },
   {
     id: '302',
-    icon: Mail,
+    image: mail,
     title: 'Quality Standards',
     description: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
   },
@@ -43,10 +43,10 @@ const About: FC = () => {
               took a galley.
             </p>
             <ul className="about__list">
-              {items.map(({ id, icon: Icon, title, description }) => (
+              {items.map(({ id, image, title, description }) => (
                 <li key={id} className="about__item">
                   <div className="about__icon">
-                    <Icon />
+                    <img src={image} alt={title} />
                   </div>
                   <div className="about__overview">
                     <h3>{title}</h3>
