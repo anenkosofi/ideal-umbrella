@@ -7,7 +7,7 @@ type ProductItemProps = {
     product: Product;
 }
 const ProductItem: FC<ProductItemProps> = ({product: { name, image, category, rating, price, discount}}) => {
-    const getDiscountPrice = () => Math.floor(((100 - discount) / 100) * price).toFixed();
+    const getDiscountPrice = () => discount ? Math.floor(((100 - discount) / 100) * price).toFixed() : 0;
 
     return (
         <li className="products__item">
@@ -19,8 +19,8 @@ const ProductItem: FC<ProductItemProps> = ({product: { name, image, category, ra
                 </div>
                 <div className="products__info">
                     <div className="products__price">
-                        <span className="products__price_old">${price}.00</span>
-                        <span>${getDiscountPrice()}.00</span>
+                        <span className={discount ? "products__price_old" : ''}>${price}.00</span>
+                        {!!discount && <span>${getDiscountPrice()}.00</span>}
                     </div>
                     <Rating rating={rating} />
                 </div>
