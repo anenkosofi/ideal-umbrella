@@ -1,0 +1,22 @@
+@import '@styles/shared.scss';
+
+.organic {
+  padding: 201px 0 200px;
+  background-color: $primary-cyan;
+
+  &__pre-heading {
+    font-family: $tertiary-font-stack;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    color: $primary-olive;
+  }
+
+  &__heading {
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: normal;
+    color: $white;
+  }
+}

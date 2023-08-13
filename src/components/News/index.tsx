@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import {NavLink} from "react-router-dom";
+import {Pathname} from "@types";
 
 import Container from '@components/Container';
 import NewsList from '@components/NewsList';
@@ -18,12 +20,12 @@ const News: FC = () => {
                 Discover weekly content about <br /> organic food, &#38; more
               </h2>
             </div>
-            <button type="button" className="news__more-button">
+            <NavLink to={Pathname.NEWS} className="news__more-button">
               <span>More News</span>
               <span className="news__read-icon">
                 <FaArrowRight size={10} />
               </span>
-            </button>
+            </NavLink>
           </div>
           <NewsList />
         </div>

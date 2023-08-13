@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { FaUser, FaArrowRight } from 'react-icons/fa';
+import {NavLink} from "react-router-dom";
 
 type NewsItemProps = {
   newsItem: {
@@ -11,7 +12,7 @@ type NewsItemProps = {
   };
 };
 
-const NewsItem: FC<NewsItemProps> = ({ newsItem: { image, title, description, author } }) => {
+const NewsItem: FC<NewsItemProps> = ({ newsItem: { id, image, title, description, author } }) => {
   return (
     <li className="news__item">
       <img src={image} alt={title} className="news__pic" />
@@ -26,12 +27,12 @@ const NewsItem: FC<NewsItemProps> = ({ newsItem: { image, title, description, au
         </div>
         <h3 className="news__name">{title}</h3>
         <p className="news__description">{description}</p>
-        <button type="button" className="news__read-button">
+        <NavLink to={`news/${id}`} className="news__read-button">
           <span>Read More</span>
           <span className="news__read-icon">
             <FaArrowRight size={10} />
           </span>
-        </button>
+        </NavLink>
       </div>
     </li>
   );

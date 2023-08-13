@@ -1,0 +1,20 @@
+@import '@styles/shared.scss';
+
+.rating {
+  &__list {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: #FFA858;
+    stroke: #FFA858;
+
+    &_empty {
+      fill: transparent;
+      stroke: $primary-dark-grey;
+    }
+  }
+}

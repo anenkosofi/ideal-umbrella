@@ -1,0 +1,150 @@
+@import "@styles/shared.scss";
+
+.testimonials {
+  padding: 164px 0;
+  background-image: url('../../assets/testimonials.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1108px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 39px;
+  }
+
+  &__upper-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 780px;
+    padding-bottom: 102px;
+    border-bottom: 1px solid #E0E0E0;
+  }
+
+  &__pre-heading {
+    font-family: $tertiary-font-stack;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    color: $primary-olive;
+  }
+
+  &__heading {
+    margin-bottom: 60px;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+    color: $primary-cyan
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__pic {
+    width: 115px;
+    height: 115px;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__comment {
+    margin: 20px 0;
+    font-family: $secondary-font-stack;
+    font-weight: 400;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  &__author {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    color: $primary-cyan;
+  }
+
+  &__role {
+    margin-bottom: 19px;
+    font-family: $secondary-font-stack;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__button {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #c4c4c4;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+
+    &_active {
+      background-color: $primary-olive;
+    }
+  }
+
+  &__bottom-content {
+    width: 100%;
+    padding-top: 102px;
+  }
+
+  &__content-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 211px;
+    height: 211px;
+    text-align: center;
+    font-family: $secondary-font-stack;
+    font-weight: 600;
+    line-height: 1.65;
+    color: $primary-cyan;
+    border: 4px solid $primary-olive;
+    border-radius: 50%;
+
+    &_large {
+      font-family: $primary-font-stack;
+      font-size: 50px;
+      font-weight: 800;
+      line-height: normal;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 191px;
+      height: 191px;
+      background-color: $primary-light-grey;
+      border-radius: 50%;
+    }
+  }
+}
