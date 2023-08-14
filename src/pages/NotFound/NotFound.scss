@@ -1,0 +1,67 @@
+@import '@styles/shared.scss';
+
+.not-found {
+  padding: 214px 0;
+  background-image: url('../../assets/404.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    max-width: 560px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: 48px;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 70px;
+    font-weight: 800;
+    line-height: normal;
+    color: $primary-cyan;
+
+    &_large {
+      font-size: 300px;
+      color: #8fa8a8;
+    }
+  }
+
+  &__description {
+    margin-bottom: 36px;
+    font-family: $secondary-font-stack;
+    font-weight: 600;
+    line-height: 1.65;
+  }
+
+  &__go-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    width: 220px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    color: $white;
+    background-color: $primary-cyan;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__go-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    color: $white;
+    background-color: #335b6b;
+    border-radius: 50%;
+  }
+}
