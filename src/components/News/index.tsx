@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-import {NavLink} from "react-router-dom";
-import {Pathname} from "@types";
+import { NavLink } from 'react-router-dom';
 
 import Container from '@components/Container';
 import NewsList from '@components/NewsList';
+import { Pathname } from '@types';
 
 import './News.scss';
 

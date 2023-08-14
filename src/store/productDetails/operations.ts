@@ -3,13 +3,11 @@ import axios from 'axios';
 
 import { Product } from '@types';
 
-axios.defaults.baseURL = 'https://organick-service.onrender.com/api/';
-
-export const getProducts = createAsyncThunk<Product[], undefined, { rejectValue: string }>(
-  'products/getProducts',
-  async (_, thunkAPI) => {
+export const getProductById = createAsyncThunk<Product, string, { rejectValue: string }>(
+  'products/getById',
+  async (productId, thunkAPI) => {
     try {
-      const response = await axios.get('products');
+      const response = await axios.get<Product>(`products/${productId}`);
       return response.data;
     } catch (e: unknown) {
       if (e instanceof Error) {

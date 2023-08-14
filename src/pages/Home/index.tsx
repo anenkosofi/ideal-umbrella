@@ -1,4 +1,3 @@
-import {getProducts} from "@store/products/operations";
 import React, { FC, useEffect } from 'react';
 
 import About from '@components/About';
@@ -7,17 +6,18 @@ import Hero from '@components/Hero';
 import News from '@components/News';
 import Offer from '@components/Offer';
 import OfferList from '@components/OfferList';
-import Products from "@components/Products";
-import Testimonials from "@components/Testimonials";
+import Products from '@components/Products';
+import Testimonials from '@components/Testimonials';
 import WhoWeAre from '@components/WhoWeAre';
-import {useAppDispatch} from "@hooks";
+import { useAppDispatch } from '@hooks';
+import { getProducts } from '@store/products/operations';
 
 const Home: FC = () => {
-    const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
 
-    useEffect(() => {
-        dispatch(getProducts());
-    }, [])
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
 
   return (
     <>

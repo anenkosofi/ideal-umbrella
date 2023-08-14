@@ -37,6 +37,7 @@
     padding-top: 73px;
     background-color: $primary-light-grey;
     border-radius: 30px;
+    cursor: pointer;
   }
 
   &__pic {
@@ -73,7 +74,7 @@
     font-weight: 600;
     line-height: normal;
     color: $primary-cyan;
-    border-bottom: 1px solid #DEDDDD;
+    border-bottom: 1px solid #dedddd;
   }
 
   &__info {
@@ -93,7 +94,7 @@
     color: $primary-cyan;
 
     &_old {
-      color: #B8B8B8;
+      color: #b8b8b8;
       font-size: 15px;
       font-weight: 600;
       line-height: normal;
@@ -114,7 +115,7 @@
     line-height: normal;
     text-transform: capitalize;
     color: $white;
-    background-color: #1E1E1E;;
+    background-color: #1e1e1e;
     border: none;
     border-radius: 16px;
     outline: none;
@@ -132,4 +133,3 @@
     border-radius: 50%;
   }
 }
-
