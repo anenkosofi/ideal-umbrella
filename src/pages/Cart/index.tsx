@@ -1,14 +1,18 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
-import Container from '@components/Container';
+import Order from '@components/Order';
+import OrderForm from '@components/OrderForm';
 
 const Cart: FC = () => {
+  const [isFormShown, setIsFormShown] = useState(false);
+
+  const showFormHandler = () => setIsFormShown(true);
+
   return (
-    <section>
-      <Container>
-        <div>Cart</div>
-      </Container>
-    </section>
+    <>
+      <Order isFormShown={isFormShown} showForm={showFormHandler} />
+      {isFormShown && <OrderForm />}
+    </>
   );
 };
 

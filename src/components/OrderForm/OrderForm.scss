@@ -1,0 +1,121 @@
+@import '@styles/shared.scss';
+
+.order-form {
+  max-width: 1184px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__container {
+    padding-bottom: 87px;
+    background-color: rgba(253, 176, 45, 0.16);
+  }
+
+  &__field-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 127px);
+    row-gap: 50px;
+    column-gap: 46px;
+    margin-bottom: 50px;
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  &__label {
+    font-weight: 600;
+    line-height: normal;
+    color: $primary-cyan;
+  }
+
+  &__input {
+    height: 80px;
+    padding: 28px 23px 31px;
+    font-family: $primary-font-stack;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    color: $primary-cyan;
+    background-color: $white;
+    border: 1px solid $primary-olive;
+    border-radius: 16px;
+    outline: none;
+
+    &::placeholder {
+      font-family: $primary-font-stack;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: normal;
+      color: #ababab;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    color: #c7522d;
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    margin-bottom: 114px;
+  }
+
+  &__textarea {
+    height: 247px;
+    padding: 28px 23px;
+    font-family: $primary-font-stack;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    color: $primary-cyan;
+    background-color: $white;
+    border: 1px solid $primary-olive;
+    border-radius: 16px;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+      font-family: $primary-font-stack;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: normal;
+      color: #ababab;
+    }
+  }
+
+  &__confirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 72px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    color: $white;
+    background-color: $primary-cyan;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #ababab;
+    }
+  }
+}
