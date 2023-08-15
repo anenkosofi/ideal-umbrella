@@ -6,11 +6,15 @@ import { ReactComponent as Loop } from '@assets/loop.svg';
 import Container from '@components/Container';
 import Logo from '@components/Logo';
 import { navItems } from '@constants';
+import { useAppSelector } from '@hooks';
+import { selectCart } from '@store/cart/selectors';
 import { Pathname } from '@types';
 
 import './Header.scss';
 
 const Header: FC = () => {
+  const cart = useAppSelector(selectCart);
+
   return (
     <header className="header">
       <Container>
@@ -45,7 +49,7 @@ const Header: FC = () => {
             <span className="header__cart-icon">
               <Cart />
             </span>
-            <span className="header__cart-text">Cart (0)</span>
+            <span className="header__cart-text">Cart ({cart.length})</span>
           </NavLink>
         </div>
       </Container>

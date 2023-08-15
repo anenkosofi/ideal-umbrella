@@ -11,6 +11,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
+import { cartReducer } from './cart/slice';
 import { filtersReducer } from './filters/slice';
 import { productDetailsReducer } from './productDetails/slice';
 import { productsReducer } from './products/slice';
@@ -26,6 +27,7 @@ export const store = configureStore({
     products: persistReducer<ProductsState>(productsPersistConfig, productsReducer),
     productDetails: productDetailsReducer,
     filters: filtersReducer,
+    cart: cartReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

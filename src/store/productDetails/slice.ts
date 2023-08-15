@@ -21,24 +21,25 @@ const productDetailsSlice = createSlice({
   initialState: productDetailsInitialState,
   reducers: {},
   extraReducers: builder => {
-    builder.addCase(getProductById.pending, state => {
-      return { ...state, isLoading: true };
-    });
-    builder.addCase(getProductById.fulfilled, (state, { payload }) => {
-      return {
-        ...state,
-        error: null,
-        selectedProduct: payload,
-        isLoading: false,
-      };
-    });
-    builder.addCase(getProductById.rejected, (state, { payload }) => {
-      return {
-        ...state,
-        isLoading: false,
-        error: payload ? payload : 'An unknown error occured',
-      };
-    });
+    builder
+      .addCase(getProductById.pending, state => {
+        return { ...state, isLoading: true };
+      })
+      .addCase(getProductById.fulfilled, (state, { payload }) => {
+        return {
+          ...state,
+          error: null,
+          selectedProduct: payload,
+          isLoading: false,
+        };
+      })
+      .addCase(getProductById.rejected, (state, { payload }) => {
+        return {
+          ...state,
+          isLoading: false,
+          error: payload ? payload : 'An unknown error occured',
+        };
+      });
   },
 });
 

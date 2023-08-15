@@ -1,14 +1,26 @@
 import React, { FC } from 'react';
 
-import { Product } from '@types';
+import { useAppDispatch } from '@hooks';
+import { deleteProduct } from '@store/cart/operations';
+import { Cart } from '@types';
 import { getDiscountPrice } from '@utils';
 
 type OrderItemProps = {
-  item: Product;
+  item: Cart;
 };
 
-const OrderItem: FC<OrderItemProps> = ({ item: { name, image, price, discount } }) => {
+const OrderItem: FC<OrderItemProps> = ({
+  item: {
+    product: { name, image, price, discount },
+    quantity,
+    _id,
+  },
+}) => {
+  const dispatch = useAppDispatch();
+
   const discountPrice = getDiscountPrice(price, discount);
+
+  const deleteProductHandler = () => dispatch(deleteProduct(_id));
 
   return (
     <li className="order__item">
@@ -24,9 +36,9 @@ const OrderItem: FC<OrderItemProps> = ({ item: { name, image, price, discount } 
       </div>
       <div className="order__control">
         <span className="order__quantity">Quantity:</span>
-        <input type="text" className="order__input" />
+        <input type="text" className="order__input" defaultValue={quantity} />
       </div>
-      <button type="button" className="order__x-button">
+      <button type="button" className="order__x-button" onClick={deleteProductHandler}>
         X
       </button>
     </li>

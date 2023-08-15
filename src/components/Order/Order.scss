@@ -186,4 +186,12 @@
     background-color: #335b6b;
     border-radius: 50%;
   }
+
+  &__empty {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: normal;
+    color: $primary-cyan;
+    text-align: center;
+  }
 }

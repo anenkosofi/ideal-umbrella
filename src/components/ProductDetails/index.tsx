@@ -4,7 +4,8 @@ import { FaArrowRight } from 'react-icons/fa';
 import Container from '@components/Container';
 import Loader from '@components/Loader';
 import Rating from '@components/Rating';
-import { useAppSelector } from '@hooks';
+import { useAppSelector, useAppDispatch } from '@hooks';
+import { addProduct } from '@store/cart/operations';
 import { selectProductById } from '@store/productDetails/selectors';
 import { selectIsLoading } from '@store/productDetails/selectors';
 import { Tab } from '@types';
@@ -17,22 +18,36 @@ type ProductDetailsProps = {
 };
 
 const ProductDetails: FC<ProductDetailsProps> = ({ closeModal }) => {
+  const dispatch = useAppDispatch();
+
   const selectedProduct = useAppSelector(selectProductById);
   const isLoading = useAppSelector(selectIsLoading);
 
   const [selectedTab, setSelectedTab] = useState(Tab.PRODUCT_DESCRIPTION);
+  const [quantity, setQuantity] = useState('1');
 
   if (!selectedProduct) {
     return null;
   }
 
-  const { name, image, category, description, rating, price, discount, additional } =
+  const { _id, name, image, category, description, rating, price, discount, additional } =
     selectedProduct;
 
   const discountPrice = getDiscountPrice(price, discount);
 
   const setTab = (tab: Tab) => {
     setSelectedTab(tab);
+  };
+
+  const changeQuantityHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = Number(e.currentTarget.value);
+    if (Number.isNaN(value)) return;
+    setQuantity(String(value));
+  };
+
+  const addProductHandler = () => {
+    dispatch(addProduct({ product: _id, quantity }));
+    setQuantity('1');
   };
 
   if (isLoading) {
@@ -60,8 +75,20 @@ const ProductDetails: FC<ProductDetailsProps> = ({ closeModal }) => {
             <p className="details__description">{description.s}</p>
             <div className="details__control">
               <span className="details__quantity">Quantity:</span>
-              <input type="text" placeholder="1" className="details__input" />
-              <button type="button" className="details__add-button">
+              <input
+                type="text"
+                name="quantity"
+                value={quantity}
+                onChange={changeQuantityHandler}
+                placeholder="1"
+                className="details__input"
+              />
+              <button
+                type="button"
+                className="details__add-button"
+                disabled={!Number(quantity)}
+                onClick={addProductHandler}
+              >
                 <span>Add To Cart</span>
                 <span className="details__add-icon">
                   <FaArrowRight size={10} />
