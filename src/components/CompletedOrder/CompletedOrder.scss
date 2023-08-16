@@ -1,0 +1,22 @@
+@import '@styles/shared.scss';
+
+.default {
+  padding: 94px 0 269px;
+
+  &__heading {
+    margin-bottom: 44px;
+    font-size: 70px;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+    color: $primary-cyan;
+  }
+
+  &__bg {
+    height: 450px;
+    background-image: url('../../assets/completed-order.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

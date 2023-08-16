@@ -24,7 +24,11 @@ export const schema = z.object({
   message: z.string().optional(),
 });
 
-const OrderForm: FC = () => {
+type OrderFormProps = {
+  submitForm: () => void;
+};
+
+const OrderForm: FC<OrderFormProps> = ({ submitForm }) => {
   const defaultValues: Form = {
     name: '',
     email: '',
@@ -52,6 +56,7 @@ const OrderForm: FC = () => {
 
   useEffect(() => {
     if (isSubmitSuccessful) {
+      submitForm();
       reset(defaultValues);
     }
   }, [isSubmitSuccessful]);

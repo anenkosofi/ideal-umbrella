@@ -41,7 +41,9 @@ const cartSlice = createSlice({
       .addCase(addProduct.fulfilled, (state, { payload }) => {
         return {
           ...state,
-          items: [payload, ...state.items],
+          items: state.items.map(item =>
+            item.product._id === payload.product._id ? { ...item, ...payload } : item
+          ),
           isLoading: false,
           error: null,
         };

@@ -10,7 +10,6 @@ import Products from '@components/Products';
 import Testimonials from '@components/Testimonials';
 import WhoWeAre from '@components/WhoWeAre';
 import { useAppDispatch } from '@hooks';
-import { getCart } from '@store/cart/operations';
 import { getProducts } from '@store/products/operations';
 
 const Home: FC = () => {
@@ -18,7 +17,6 @@ const Home: FC = () => {
 
   useEffect(() => {
     dispatch(getProducts());
-    dispatch(getCart());
   }, []);
 
   return (

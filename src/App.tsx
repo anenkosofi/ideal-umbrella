@@ -1,7 +1,9 @@
-import React, { FC, lazy } from 'react';
+import React, { FC, lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Layout from '@components/Layout';
+import { useAppDispatch } from '@hooks';
+import { getCart } from '@store/cart/operations';
 import { Pathname } from '@types';
 const AboutPage = lazy(() => import('@pages/About'));
 const BlogPage = lazy(() => import('@pages/Blog'));
@@ -13,6 +15,12 @@ const ServicesPage = lazy(() => import('@pages/Services'));
 const ShopPage = lazy(() => import('@pages/Shop'));
 
 const App: FC = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getCart());
+  }, []);
+
   return (
     <Routes>
       <Route path={Pathname.HOME} element={<Layout />}>
