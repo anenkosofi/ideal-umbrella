@@ -12,7 +12,7 @@
    `npm start`
 
 4. Once the server is up and running, open your web browser and visit the
-   [http://localhost:3000](http://localhost:3000) to access the website
+   [http://localhost:5173](http://localhost:5173) to access the website
 
 5. Explore the website and interact with the various sections.
 
